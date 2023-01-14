@@ -1,0 +1,108 @@
+﻿body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.67), rgba(0, 0, 0, 0.2)),url(assets/funnypets.png);
+    background-position: center;
+}
+
+.column {
+    float: left;
+    width: 40%;
+    height: 50%;
+    padding: 70px;
+    font-size: 20px;
+}
+
+.column p {
+    margin-top: -1px;
+}
+
+.firstcol {
+    padding-left: 100px;
+}
+
+.form {
+    height: 73vh;
+}
+
+.blanks label {
+    padding-right: 20px;
+    display: inline-block;
+    width: 50px;
+}
+
+.blanks input {
+    padding-right: 30px;
+    height: 30px;
+    border: 2px solid #72517A;
+    border-radius: 10px;
+    color: #4E4E4E;
+}
+
+select {
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: transparent;
+    height: 30px;
+    border: 2px solid #72517A;
+    color: #4E4E4E;
+    height: 35px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.secondcol {
+    padding-right: 20px;
+}
+
+.mytextarea {
+    overflow: auto;
+    resize: vertical;
+    border-radius: 10px;
+}
+
+#comment {
+    border: 2px solid #72517A;
+    color: #4E4E4E;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.submit-btn {
+    border: 2px solid #72517A;
+    color: #72517A;
+    display: flex;
+    border-radius: 22px;
+    padding: 12px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    width: auto;
+    letter-spacing: 0;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form {
+    font-size: 20px;
+    font-weight: bold;
+}
+/*.form::after{
+    content: "";
+    background: url(assets/funnypets.png);
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: justify;
+    position: absolute;
+}
+
+    width: auto;
+    height: 500px;
+    display: block;
+    position: relative;
+*/

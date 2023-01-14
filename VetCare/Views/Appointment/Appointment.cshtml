@@ -1,0 +1,51 @@
+﻿@Styles.Render("~/Content/Appointment.css")
+@Styles.Render("~/Content/bootstrap-datepicker3.min.css")
+@model VetCare.Models.AppointmentViewModel
+
+    <div name="myForm" class="form">
+        @using (Html.BeginForm("Appointment", "Appointment", FormMethod.Post))
+        {
+            <div class="column">
+                <div class="firstcol">
+                    <p>MAKE AN APPOINTMENT</p>
+                    <p>Please fill the blanks: </p>
+                    <span>Enter Your Name:</span> @Html.TextBoxFor(x => x.Name, new { id = "fname" })<br />
+                    <span>Enter Your Phone:</span> @Html.TextBoxFor(x => x.Phone, new {id ="fphone"})<br />
+                    <span>Enter Your Email:</span> @Html.TextBoxFor(x => x.Email, new { id = "femail" })<br />
+                    <br />
+                    <label for="select-box">Reason</label>
+                    @Html.EnumDropDownListFor(
+                    x => x.ReasonEnum,
+                    "Select Reason",
+                    new { @class = "form-control" , id = "freason"})
+                    <br />
+                    <br />
+                    <label for="name">Gender: </label>
+                    @Html.EnumDropDownListFor(
+                    x => x.GenderEnum,
+                    "Select Gender",
+                    new { @class = "form-control" , id = "fgender" })
+                    <br />
+                    <br />
+                    <div class="form-group">
+                        @Html.Label("Date", new { @class = "control-label" })
+                        @Html.TextBox("Date", null, new { @class = "form-control datepicker", type = "date" , id= "fdate"})
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="secondcol">
+                    <label for="textarea">
+                        We look forward to hearing from you
+                    </label><br><br>
+                    <div class="textarea">
+                        @Html.TextAreaFor(x => x.AddInfo, new { @cols = "100", @rows = "8", @style = "width:100%;" , id= "faddinfo"})
+                    </div>
+                    <input class="submit-btn" id="Submit" type="submit" value="submit" />
+                </div>
+            </div>
+        }
+        </form>
+    </div>
+    @Scripts.Render("~/Scripts/submitCheck.js")
+   @Scripts.Render("~/Scripts/Appointment.js")

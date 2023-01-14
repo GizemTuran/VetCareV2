@@ -1,0 +1,42 @@
+﻿
+@model VetCare.Models.Login
+@Styles.Render("~/Content/Login.css")
+
+<div id="login">
+    <h3 class="login-title">Login form</h3>
+    <div class="container">
+        <div id="login-row" class="row justify-content-center align-items-center">
+            <div id="login-column" class="col-md-6">
+                <div id="login-box" class="col-md-12">
+                    @ViewBag.Message
+                    @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+                    {
+                        <div class="login-textbox">
+                            <h3 class="text-center text-info"></h3>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Email)
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email" })
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Password)
+                                @Html.TextBoxFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+                            </div>
+                            <div class="form-group">
+                                <br>
+                                <button type="submit" name="submit" class="login-btn">Login</button>
+                            </div>
+                            <div id="register-link" class="text-right">
+                                <h4>If you don't have an account</h4>
+                                @Html.ActionLink("Register", "Register", "Login")
+
+                            </div>
+                        </div>
+                        
+                         <p>@Html.ValidationMessage("loginerror")</p> //login yapılmayınca error mesajı verir.
+                         
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

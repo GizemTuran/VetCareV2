@@ -1,0 +1,28 @@
+﻿#login-textbox {
+    float: left;
+    display-inline: block;
+    text-align: right;
+}
+
+#login {
+    position: absolute;
+    left: 42%;
+    top: 15%;
+}
+.form-group {
+    padding: 10px;
+}
+.login-btn {
+    border: 2px solid #72517A;
+    color: #72517A;
+    border-radius: 25px;
+    padding: 6px 15px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    width: auto;
+    letter-spacing: 0;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+}

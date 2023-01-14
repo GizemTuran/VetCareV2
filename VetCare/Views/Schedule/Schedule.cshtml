@@ -1,0 +1,66 @@
+﻿
+    <div class="tablewrapper">
+        <table class="schtable" cellpadding="40" cellspacing="40">
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Phone
+                    </th>
+                    <th>
+                        AddInfo
+                    </th>
+                    <th>
+                        Date
+                    </th>
+                    <th>
+                        Gender
+                    </th>
+                    <th>
+                        Reason
+                    </th>
+                    <th>
+                        Action
+                    </th>
+            </thead>
+            </tr>
+            @foreach (var item in ViewBag.sch)
+            {
+                <tr>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.Email
+                    </td>
+                    <td>
+                        @item.Phone
+                    </td>
+                    <td>
+                        @item.AddInfo
+                    </td>
+                    <td>
+                        @item.Date
+                    </td>
+                    <td>
+                        @item.Gender
+                    </td>
+                    <td>
+                        @item.Reason
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { ID = item.ID })
+                        @Html.ActionLink("Delete", "Delete", new { ID = item.ID })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+
+
+    

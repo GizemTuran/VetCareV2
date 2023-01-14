@@ -1,0 +1,57 @@
+﻿
+
+.wrapper {
+    padding-bottom: 100px;
+}
+
+.info1 {
+    font-size: 20px;
+    padding: 20px 80px 20px 80px;
+}
+
+.info2 {
+    font-size: 20px;
+    padding-left: 80px;
+    display: inline-block;
+}
+
+.info3 {
+    font-size: 20px;
+    text-align: justify;
+    padding-right: 120px;
+    padding-top: 60px;
+}
+
+.info4 {
+    font-size: 20px;
+    padding-left: 80px;
+    padding-top: 100px;
+}
+
+.info5 {
+    font-size: 20px;
+    padding: 50px 20px 50px 20px;
+}
+
+.img2 {
+    overflow: hidden;
+    padding: 10px 15px 50px 50px;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    object-position: 30% 70%;
+    border-radius: 50%;
+    float: left;
+}
+
+.img3 {
+    overflow: hidden;
+    padding: 40px 125px 80px 20px;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    object-position: 30% 70%;
+    border-radius: 50%;
+    float: right;
+}
+

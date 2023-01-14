@@ -1,0 +1,43 @@
+﻿@model VetCare.Models.Login
+@Styles.Render("~/Content/Register.css")
+
+<div id="login">
+    <h3 class="text-center text-white pt-5">Register form</h3>
+    <div class="container">
+        <div id="login-row" class="row justify-content-center align-items-center">
+            <div id="login-column" class="col-md-6">
+                <div id="login-box" class="col-md-12">
+                    @ViewBag.Message
+                    @using (Html.BeginForm("Register", "Login", FormMethod.Post))
+                    {
+                        <div id="login-textbox">
+                            <h3 class="text-center text-info"></h3>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.FirstName, "First name: ")
+                                @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", placeholder = "First Name" })
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.LastName, "Last name: ")
+                                @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", placeholder = "Last Name" })
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Email, "Email:")
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email" })
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Password, "Password: ")
+                                @Html.TextBoxFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" name="submit" class="register-btn">Register</button>
+                        </div>
+                        <h4>Already have an account?</h4>
+                        @Html.ActionLink("Login", "Login", "Login")
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
